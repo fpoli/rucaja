@@ -22,6 +22,10 @@ mod jvm_object_array;
 mod jvm_short_array;
 mod jvm_string;
 mod jvm_throwable;
+mod array {
+    pub mod jvm_object_array;
+    pub mod jvm_int_array;
+}
 
 pub use jni_sys::{
     jarray, jboolean, jbooleanArray, jbyte, jbyteArray, jchar, jcharArray, jdouble, jdoubleArray,
@@ -56,3 +60,5 @@ pub use jvm_object_array::JvmObjectArray;
 pub use jvm_string::JvmString;
 pub use jvm_short_array::JvmShortArray;
 pub use jvm_throwable::JvmThrowable;
+pub use array::jvm_object_array::MyJvmObjectArray;
+pub use array::jvm_int_array::MyJvmIntArray;
