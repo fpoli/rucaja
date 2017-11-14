@@ -28,8 +28,8 @@ impl<'a> MyJvmObjectArray<'a> {
             (**jvm_attachment.jni_environment()).NewObjectArray.unwrap()(
                 jvm_attachment.jni_environment(),
                 length,
-                *class.jvm_class_ptr(),
-                *initial_element.jvm_object_ptr()
+                class.jvm_ptr(),
+                initial_element.jvm_ptr()
             )
         };
 
